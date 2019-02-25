@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-Vendor: ISeriesAdapterNode Provider
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Name: ISeriesAdapterNode Plug-in
+Bundle-SymbolicName: ISeriesAdapterNode; singleton:=true
+Require-Bundle: com.ibm.etools.mft.api,com.ibm.etools.mft.config
+Bundle-Version: 1.0.8.qualifier
+Bundle-ManifestVersion: 2
+
