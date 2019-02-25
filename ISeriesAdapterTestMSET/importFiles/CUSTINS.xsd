@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="pcml">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="CUSTINS" minOccurs="0" />
+			</xsd:sequence>
+			<xsd:attribute default="4.0" type="xsd:string" name="version" />
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CUSTINS">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="CUSTID">
+					<xsd:complexType>
+						<xsd:attribute name="pcmltype" type="xsd:string"
+							default="data" />
+						<xsd:attribute name="name" type="xsd:string"
+							default="CUSTID" />
+						<xsd:attribute name="type" type="xsd:string"
+							default="int" />
+						<xsd:attribute name="length" type="xsd:string"
+							default="4" />
+						<xsd:attribute name="precision" type="xsd:string"
+							default="31" />
+						<xsd:attribute name="usage" type="xsd:string"
+							default="inputoutput" />
+						<xsd:attribute name="value" type="xsd:string"
+							default="" />
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="CUSTNAME">
+					<xsd:complexType>
+						<xsd:attribute name="pcmltype" type="xsd:string"
+							default="data" />
+						<xsd:attribute name="name" type="xsd:string"
+							default="CUSTNAME" />
+						<xsd:attribute name="type" type="xsd:string"
+							default="char" />
+						<xsd:attribute name="length" type="xsd:string"
+							default="30" />
+						<xsd:attribute name="usage" type="xsd:string"
+							default="inputoutput" />
+						<xsd:attribute name="value" type="xsd:string"
+							default="" />
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="CUSTPHONE">
+					<xsd:complexType>
+						<xsd:attribute name="pcmltype" type="xsd:string"
+							default="data" />
+						<xsd:attribute name="name" type="xsd:string"
+							default="CUSTPHONE" />
+						<xsd:attribute name="type" type="xsd:string"
+							default="char" />
+						<xsd:attribute name="length" type="xsd:string"
+							default="15" />
+						<xsd:attribute name="usage" type="xsd:string"
+							default="inputoutput" />
+						<xsd:attribute name="value" type="xsd:string"
+							default="" />
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="CUSTBAL">
+					<xsd:complexType>
+						<xsd:attribute name="pcmltype" type="xsd:string"
+							default="data" />
+						<xsd:attribute name="name" type="xsd:string"
+							default="CUSTBAL" />
+						<xsd:attribute name="type" type="xsd:string"
+							default="packed" />
+						<xsd:attribute name="length" type="xsd:string"
+							default="7" />
+						<xsd:attribute name="precision" type="xsd:string"
+							default="2" />
+						<xsd:attribute name="usage" type="xsd:string"
+							default="inputoutput" />
+						<xsd:attribute name="value" type="xsd:string"
+							default="" />
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="pcmltype" type="xsd:string"
+				default="program" />
+			<xsd:attribute name="name" type="xsd:string" default="CUSTINS" />
+			<xsd:attribute name="path" type="xsd:string"
+				default="/QSYS.LIB/JWENDE.LIB/CUSTINS.PGM" />
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
