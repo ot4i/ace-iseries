@@ -1,0 +1,64 @@
+CREATE COMPUTE MODULE createPCML
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+
+		SET OutputRoot.Properties.MessageFormat = 'XMLNSC';
+
+		CREATE LASTCHILD OF OutputRoot.XMLNSC NAME 'pcml';
+		CREATE LASTCHILD OF OutputRoot.XMLNSC.pcml NAME 'CUSTINS__1__';
+		
+		SET OutputRoot.XMLNSC.pcml.CUSTINS__1__.CUSTID__1__CUSTINS.(XMLNSC.Attribute)value = '1234';
+		SET OutputRoot.XMLNSC.pcml.CUSTINS__1__.CUSTNAME__2__CUSTINS.(XMLNSC.Attribute)value = 'Hans Mueller';
+		SET OutputRoot.XMLNSC.pcml.CUSTINS__1__.CUSTPHONE__3__CUSTINS.(XMLNSC.Attribute)value = '06134-22554';
+		SET OutputRoot.XMLNSC.pcml.CUSTINS__1__.CUSTBAL__4__CUSTINS.(XMLNSC.Attribute)value = '90.20';
+
+		RETURN TRUE; 
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;
+
+
+CREATE COMPUTE MODULE createXPCML
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.Properties.MessageFormat = 'XMLNSC';
+
+		CREATE LASTCHILD OF OutputRoot.XMLNSC NAME 'xpcml';
+		CREATE LASTCHILD OF OutputRoot.XMLNSC.xpcml NAME 'CUSTINS__1__';
+		
+		SET OutputRoot.XMLNSC.xpcml.CUSTINS__1__.parameterList.CUSTID__1__.(XMLNSC.Attribute)value = '1234';
+		SET OutputRoot.XMLNSC.xpcml.CUSTINS__1__.parameterList.CUSTNAME__2__.(XMLNSC.Attribute)value = 'Hans Müller';
+		SET OutputRoot.XMLNSC.xpcml.CUSTINS__1__.parameterList.CUSTPHONE__3__.(XMLNSC.Attribute)value = '06134-22554';
+		SET OutputRoot.XMLNSC.xpcml.CUSTINS__1__.parameterList.CUSTBAL__4__.(XMLNSC.Attribute)value = '90.20';
+
+		RETURN TRUE; 
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;
+
