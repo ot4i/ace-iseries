@@ -10,5 +10,13 @@
 
 ## Install IBM Integration Toolkit
 
+Get a developer edition of IBM IIB or App Connect Enterprise from [here](https://developer.ibm.com/integration/docs/ibm-integration-bus/get-started/get-started-with-ibm-integration-bus-for-developers/)
+
 ## Install eGit feature from:
-http://download.eclipse.org/egit/updates-4.2
+
++ Eclipse feature update [site](http://download.eclipse.org/egit/updates-4.2)
+
+## Get the latest version of jt400
+
++ from [IBM Toolbox for Java](http://jt400.sourceforge.net/)
+
