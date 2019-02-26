@@ -9,7 +9,7 @@ This SupportPac delivers a set of IIB (or ACE) extension nodes which can be used
 
 This repository supplies App Connect Enterprise software plugin message flow nodes that allow connection to programs and data queues on IBM System I (Power Systems including AS/400, iSeries, and System I).
 
-The supplied version had been developed and tested on Linux 86 and Microsoft Windows.
+The supplied version had been developed on Microsoft Windows (V7 currently) but should run on Linux X86 too.
 
 ## POSSIBLE USES
 
