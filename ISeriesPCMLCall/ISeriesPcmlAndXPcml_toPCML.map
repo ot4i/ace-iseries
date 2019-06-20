@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <documentation>This map was created by converting /ISeriesAdapterTest/ISeriesPcmlAndXPcml_toPCML.msgmap using the Integration Toolkit assisted msgmap converter version 11.0.0.4. Time stamp: 28.05.2019 21:43:32</documentation>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/BlobMessage.xsd" var="in"/>
+     <output path="mbsharedlib://ISeriesAdapterTestPcml/CUSTINS_pcml.xsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="ISeriesPcmlAndXPcml_toPCML">
+        <input namespace="" path="$in/mb:msg(BLOB,assembly,BLOB,Properties)" var="MessageAssembly"/>
+        <output path="mb:msg(pcml,assembly,XMLNSC,Properties)" var="MessageAssembly1"/>
+        <assign value="4.0">
+            <output path="pcml/@version"/>
+        </assign>
+        <assign value="program">
+            <output path="pcml/CUSTINS__1__/@pcmltype"/>
+        </assign>
+        <assign value="CUSTINS">
+            <output path="pcml/CUSTINS__1__/@name"/>
+        </assign>
+        <assign value="/QSYS.LIB/WMBSAMPLE.LIB/CUSTINS.PGM">
+            <output path="pcml/CUSTINS__1__/@path"/>
+        </assign>
+        <assign value="data">
+            <output path="pcml/CUSTINS__1__/CUSTID__1__CUSTINS/@pcmltype"/>
+        </assign>
+        <assign value="CUSTID">
+            <output path="pcml/CUSTINS__1__/CUSTID__1__CUSTINS/@name"/>
+        </assign>
+        <assign value="int">
+            <output path="pcml/CUSTINS__1__/CUSTID__1__CUSTINS/@type"/>
+        </assign>
+        <assign value="4">
+            <output path="pcml/CUSTINS__1__/CUSTID__1__CUSTINS/@length"/>
+        </assign>
+        <assign value="31">
+            <output path="pcml/CUSTINS__1__/CUSTID__1__CUSTINS/@precision"/>
+        </assign>
+        <assign value="inputoutput">
+            <output path="pcml/CUSTINS__1__/CUSTID__1__CUSTINS/@usage"/>
+        </assign>
+        <assign value="12345">
+            <output path="pcml/CUSTINS__1__/CUSTID__1__CUSTINS/@value"/>
+        </assign>
+        <assign value="data">
+            <output path="pcml/CUSTINS__1__/CUSTNAME__2__CUSTINS/@pcmltype"/>
+        </assign>
+        <assign value="CUSTNAME">
+            <output path="pcml/CUSTINS__1__/CUSTNAME__2__CUSTINS/@name"/>
+        </assign>
+        <assign value="char">
+            <output path="pcml/CUSTINS__1__/CUSTNAME__2__CUSTINS/@type"/>
+        </assign>
+        <assign value="30">
+            <output path="pcml/CUSTINS__1__/CUSTNAME__2__CUSTINS/@length"/>
+        </assign>
+        <assign value="inputoutput">
+            <output path="pcml/CUSTINS__1__/CUSTNAME__2__CUSTINS/@usage"/>
+        </assign>
+        <assign value="Joerg Wende">
+            <output path="pcml/CUSTINS__1__/CUSTNAME__2__CUSTINS/@value"/>
+        </assign>
+        <assign value="data">
+            <output path="pcml/CUSTINS__1__/CUSTPHONE__3__CUSTINS/@pcmltype"/>
+        </assign>
+        <assign value="CUSTPHONE">
+            <output path="pcml/CUSTINS__1__/CUSTPHONE__3__CUSTINS/@name"/>
+        </assign>
+        <assign value="char">
+            <output path="pcml/CUSTINS__1__/CUSTPHONE__3__CUSTINS/@type"/>
+        </assign>
+        <assign value="15">
+            <output path="pcml/CUSTINS__1__/CUSTPHONE__3__CUSTINS/@length"/>
+        </assign>
+        <assign value="inputoutput">
+            <output path="pcml/CUSTINS__1__/CUSTPHONE__3__CUSTINS/@usage"/>
+        </assign>
+        <assign value="0815">
+            <output path="pcml/CUSTINS__1__/CUSTPHONE__3__CUSTINS/@value"/>
+        </assign>
+        <assign value="data">
+            <output path="pcml/CUSTINS__1__/CUSTBAL__4__CUSTINS/@pcmltype"/>
+        </assign>
+        <assign value="CUSTBAL">
+            <output path="pcml/CUSTINS__1__/CUSTBAL__4__CUSTINS/@name"/>
+        </assign>
+        <assign value="packed">
+            <output path="pcml/CUSTINS__1__/CUSTBAL__4__CUSTINS/@type"/>
+        </assign>
+        <assign value="7">
+            <output path="pcml/CUSTINS__1__/CUSTBAL__4__CUSTINS/@length"/>
+        </assign>
+        <assign value="2">
+            <output path="pcml/CUSTINS__1__/CUSTBAL__4__CUSTINS/@precision"/>
+        </assign>
+        <assign value="inputoutput">
+            <output path="pcml/CUSTINS__1__/CUSTBAL__4__CUSTINS/@usage"/>
+        </assign>
+        <assign value="100.20">
+            <output path="pcml/CUSTINS__1__/CUSTBAL__4__CUSTINS/@value"/>
+        </assign>
+        <local>
+            <input path="Properties"/>
+            <output path="Properties"/>
+            <assign value="ISeriesAdapterTestPcmlMSET">
+                <output path="MessageSet"/>
+            </assign>
+            <assign value="{}:pcml">
+                <output path="MessageType"/>
+            </assign>
+            <move>
+                <input path="Encoding"/>
+                <output path="Encoding"/>
+            </move>
+            <move>
+                <input path="CodedCharSetId"/>
+                <output path="CodedCharSetId"/>
+            </move>
+            <move>
+                <input path="Transactional"/>
+                <output path="Transactional"/>
+            </move>
+            <move>
+                <input path="Persistence"/>
+                <output path="Persistence"/>
+            </move>
+            <move>
+                <input path="CreationTime"/>
+                <output path="CreationTime"/>
+            </move>
+            <move>
+                <input path="ExpirationTime"/>
+                <output path="ExpirationTime"/>
+            </move>
+            <move>
+                <input path="Priority"/>
+                <output path="Priority"/>
+            </move>
+            <move>
+                <input path="ReplyIdentifier"/>
+                <output path="ReplyIdentifier"/>
+            </move>
+            <move>
+                <input path="ReplyProtocol"/>
+                <output path="ReplyProtocol"/>
+            </move>
+            <move>
+                <input path="Topic"/>
+                <output path="Topic"/>
+            </move>
+            <move>
+                <input path="ContentType"/>
+                <output path="ContentType"/>
+            </move>
+            <move>
+                <input path="IdentitySourceType"/>
+                <output path="IdentitySourceType"/>
+            </move>
+            <move>
+                <input path="IdentitySourceToken"/>
+                <output path="IdentitySourceToken"/>
+            </move>
+            <move>
+                <input path="IdentitySourcePassword"/>
+                <output path="IdentitySourcePassword"/>
+            </move>
+            <move>
+                <input path="IdentitySourceIssuedBy"/>
+                <output path="IdentitySourceIssuedBy"/>
+            </move>
+            <move>
+                <input path="IdentityMappedType"/>
+                <output path="IdentityMappedType"/>
+            </move>
+            <move>
+                <input path="IdentityMappedToken"/>
+                <output path="IdentityMappedToken"/>
+            </move>
+            <move>
+                <input path="IdentityMappedPassword"/>
+                <output path="IdentityMappedPassword"/>
+            </move>
+            <move>
+                <input path="IdentityMappedIssuedBy"/>
+                <output path="IdentityMappedIssuedBy"/>
+            </move>
+        </local>
+    </mappingDeclaration>
+</mappingRoot>

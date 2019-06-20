@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="xpcml">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element ref="CUSTINS__1__" minOccurs="0"/>
+</xsd:sequence>
+<xsd:attribute default="4.0" type="xsd:string" name="version"/>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="CUSTINS__1__">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="parameterList">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="CUSTID__1__">
+<xsd:complexType>
+<xsd:attribute name="xpcmltype" type="xsd:string" default="intParm"/>
+<xsd:attribute name="name" type="xsd:string" default="CUSTID"/>
+<xsd:attribute name="passDirection" type="xsd:string" default="inout"/>
+<xsd:attribute name="value" type="xsd:string" default=""/>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="CUSTNAME__2__">
+<xsd:complexType>
+<xsd:attribute name="xpcmltype" type="xsd:string" default="stringParm"/>
+<xsd:attribute name="name" type="xsd:string" default="CUSTNAME"/>
+<xsd:attribute name="passDirection" type="xsd:string" default="inout"/>
+<xsd:attribute name="length" type="xsd:string" default="30"/>
+<xsd:attribute name="value" type="xsd:string" default=""/>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="CUSTPHONE__3__">
+<xsd:complexType>
+<xsd:attribute name="xpcmltype" type="xsd:string" default="stringParm"/>
+<xsd:attribute name="name" type="xsd:string" default="CUSTPHONE"/>
+<xsd:attribute name="passDirection" type="xsd:string" default="inout"/>
+<xsd:attribute name="length" type="xsd:string" default="15"/>
+<xsd:attribute name="value" type="xsd:string" default=""/>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="CUSTBAL__4__">
+<xsd:complexType>
+<xsd:attribute name="xpcmltype" type="xsd:string" default="packedDecimalParm"/>
+<xsd:attribute name="name" type="xsd:string" default="CUSTBAL"/>
+<xsd:attribute name="passDirection" type="xsd:string" default="inout"/>
+<xsd:attribute name="totalDigits" type="xsd:string" default="7"/>
+<xsd:attribute name="fractionDigits" type="xsd:string" default="2"/>
+<xsd:attribute name="value" type="xsd:string" default=""/>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="xpcmltype" type="xsd:string" default="program"/>
+<xsd:attribute name="name" type="xsd:string" default="CUSTINS"/>
+<xsd:attribute name="path" type="xsd:string" default="/QSYS.LIB/JWENDE.LIB/CUSTINS.PGM"/>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

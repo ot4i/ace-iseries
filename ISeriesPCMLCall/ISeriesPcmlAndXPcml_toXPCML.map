@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <documentation>This map was created by converting /ISeriesAdapterTest/ISeriesPcmlAndXPcml_toXPCML.msgmap using the Integration Toolkit assisted msgmap converter version 11.0.0.4. Time stamp: 28.05.2019 21:43:46</documentation>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/BlobMessage.xsd" var="in"/>
+    <output path="/ISeriesAdapterTestXPcmlMSET/CUSTINS_xpcml.mxsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="ISeriesPcmlAndXPcml_toXPCML">
+        <input namespace="" path="$in/mb:msg(BLOB,assembly,BLOB,Properties)"/>
+        <output namespace="" path="mb:msg(xpcml,assembly,XMLNSC,Properties)"/>
+        <assign value="4.0">
+            <output path="xpcml/@version"/>
+        </assign>
+        <assign value="program">
+            <output path="xpcml/CUSTINS__1__/@xpcmltype"/>
+        </assign>
+        <assign value="CUSTINS">
+            <output path="xpcml/CUSTINS__1__/@name"/>
+        </assign>
+        <assign value="/QSYS.LIB/WMBSAMPLE.LIB/CUSTINS.PGM">
+            <output path="xpcml/CUSTINS__1__/@path"/>
+        </assign>
+        <assign value="intParm">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTID__1__/@xpcmltype"/>
+        </assign>
+        <assign value="CUSTID">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTID__1__/@name"/>
+        </assign>
+        <assign value="inout">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTID__1__/@passDirection"/>
+        </assign>
+        <assign value="2345">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTID__1__/@value"/>
+        </assign>
+        <assign value="stringParm">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTNAME__2__/@xpcmltype"/>
+        </assign>
+        <assign value="CUSTNAME">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTNAME__2__/@name"/>
+        </assign>
+        <assign value="inout">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTNAME__2__/@passDirection"/>
+        </assign>
+        <assign value="30">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTNAME__2__/@length"/>
+        </assign>
+        <assign value="Jörg Wende">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTNAME__2__/@value"/>
+        </assign>
+        <assign value="stringParm">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTPHONE__3__/@xpcmltype"/>
+        </assign>
+        <assign value="CUSTPHONE">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTPHONE__3__/@name"/>
+        </assign>
+        <assign value="inout">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTPHONE__3__/@passDirection"/>
+        </assign>
+        <assign value="15">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTPHONE__3__/@length"/>
+        </assign>
+        <assign value="0815">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTPHONE__3__/@value"/>
+        </assign>
+        <assign value="packedDecimalParm">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTBAL__4__/@xpcmltype"/>
+        </assign>
+        <assign value="CUSTBAL">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTBAL__4__/@name"/>
+        </assign>
+        <assign value="inout">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTBAL__4__/@passDirection"/>
+        </assign>
+        <assign value="7">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTBAL__4__/@totalDigits"/>
+        </assign>
+        <assign value="2">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTBAL__4__/@fractionDigits"/>
+        </assign>
+        <assign value="1000.20">
+            <output path="xpcml/CUSTINS__1__/parameterList/CUSTBAL__4__/@value"/>
+        </assign>
+        <local>
+            <input path="Properties"/>
+            <output path="Properties"/>
+            <assign value="ISeriesAdapterTestXPcmlMSET">
+                <output path="MessageSet"/>
+            </assign>
+            <assign value="{}:xpcml">
+                <output path="MessageType"/>
+            </assign>
+            <move>
+                <input path="Encoding"/>
+                <output path="Encoding"/>
+            </move>
+            <move>
+                <input path="CodedCharSetId"/>
+                <output path="CodedCharSetId"/>
+            </move>
+            <move>
+                <input path="Transactional"/>
+                <output path="Transactional"/>
+            </move>
+            <move>
+                <input path="Persistence"/>
+                <output path="Persistence"/>
+            </move>
+            <move>
+                <input path="CreationTime"/>
+                <output path="CreationTime"/>
+            </move>
+            <move>
+                <input path="ExpirationTime"/>
+                <output path="ExpirationTime"/>
+            </move>
+            <move>
+                <input path="Priority"/>
+                <output path="Priority"/>
+            </move>
+            <move>
+                <input path="ReplyIdentifier"/>
+                <output path="ReplyIdentifier"/>
+            </move>
+            <move>
+                <input path="ReplyProtocol"/>
+                <output path="ReplyProtocol"/>
+            </move>
+            <move>
+                <input path="Topic"/>
+                <output path="Topic"/>
+            </move>
+            <move>
+                <input path="ContentType"/>
+                <output path="ContentType"/>
+            </move>
+            <move>
+                <input path="IdentitySourceType"/>
+                <output path="IdentitySourceType"/>
+            </move>
+            <move>
+                <input path="IdentitySourceToken"/>
+                <output path="IdentitySourceToken"/>
+            </move>
+            <move>
+                <input path="IdentitySourcePassword"/>
+                <output path="IdentitySourcePassword"/>
+            </move>
+            <move>
+                <input path="IdentitySourceIssuedBy"/>
+                <output path="IdentitySourceIssuedBy"/>
+            </move>
+            <move>
+                <input path="IdentityMappedType"/>
+                <output path="IdentityMappedType"/>
+            </move>
+            <move>
+                <input path="IdentityMappedToken"/>
+                <output path="IdentityMappedToken"/>
+            </move>
+            <move>
+                <input path="IdentityMappedPassword"/>
+                <output path="IdentityMappedPassword"/>
+            </move>
+            <move>
+                <input path="IdentityMappedIssuedBy"/>
+                <output path="IdentityMappedIssuedBy"/>
+            </move>
+        </local>
+    </mappingDeclaration>
+</mappingRoot>

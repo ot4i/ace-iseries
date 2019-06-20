@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policies>
+  <policy policyType="UserDefined" policyName="myISeries" policyTemplate="Benutzerdefiniert">
+  <iSeriesAddress>yourIP</iSeriesAddress><iSeriesUser>yourUser</iSeriesUser>
+  	<iSeriesPassword>yourPass</iSeriesPassword>
+  	<maxConnections>10</maxConnections>
+  	<minConnections>1</minConnections>
+  	<CCSID>1208</CCSID>
+  	<maxUseTimeout></maxUseTimeout></policy>
+  
+</policies>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <!--This is a generated file.-->
+    <!--User modifications to this section will not be preserved.-->
+    <extension point="org.eclipse.help.contexts">
+        <contexts file="HelpContexts.xml" plugin="DataQueueInput"/>
+    </extension>
+    <!--This is a generated file.-->
+    <!--User modifications to this section will not be preserved.-->
+    <extension point="com.ibm.etools.mft.api.nodes"/>
+    <extension point="com.ibm.etools.mft.uri.pluginspace">
+        <directory>
+            <file encoding="Cp1252" name="com/ibm/swg/iseries/dataqueue/DataQueueInput.msgnode"/>
+            <file encoding="Cp1252" name="com/ibm/swg/iseries/dataqueue/DataQueueOutput.msgnode"/>
+            <file encoding="Cp1252" name="com/ibm/swg/iseries/dataqueue/DataQueueGet.msgnode"/>
+            <file encoding="Cp1252" name="com/ibm/swg/iseries/pcml/ISeriesPcmlCall.msgnode"/>
+        </directory>
+    </extension>
+</plugin>
