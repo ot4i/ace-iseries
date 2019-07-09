@@ -1,9 +1,9 @@
 # IAM7 V2 (ACE V11) Setup
 
 1. the toolkit plugin:
-    - download iam7_toolkit.zip
-    - unpack the file
-    - copy the jar to the tools/plugins directory (C:\IBM\ACE\11.0.0.4\tools\plugins on my system)
+... - download iam7_toolkit.zip
+... - unpack the file
+... - copy the jar to the tools/plugins directory (C:\IBM\ACE\11.0.0.4\tools\plugins on my system)
 
 
 2. the connector file: 
